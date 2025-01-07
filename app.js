@@ -15,6 +15,7 @@ const userRouter = require("./routes/userRouter.js");
 const productRouter = require("./routes/productRouter.js");
 const orderController = require("./controllers/orderController.js");
 
+app.set("trust-proxy");
 app.post(
   "/webhook-checkout",
   express.raw({ type: "application/json" }),
