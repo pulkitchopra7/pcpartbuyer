@@ -74,6 +74,7 @@ module.exports.createProduct = catchAsync(async (req, res, next) => {
     price: req.body.price,
     description: req.body.description,
     images: req.body.images,
+    qty: req.body.qty,
   });
   await product.save();
 
