@@ -33,6 +33,7 @@ module.exports.signup = catchAsync(async (req, res) => {
     email: req.body.email,
     DOB: req.body.DOB,
     password: req.body.password,
+    address:req.body.address
   });
 
   createSendJWT(newUser, 201, req, res, "Signup successful");
