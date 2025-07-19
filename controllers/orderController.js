@@ -104,6 +104,7 @@ module.exports.webhookCheckout = catchAsync(async (req, res, next) => {
 
     const order = new Order({ orderId, user, amountPaid, products });
     await order.save();
+    return res.status(200).send("webhook recieved and processed sucessfully");
   }
-  next();
+  return res.status(400).send("Signature failed");
 });
